@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website</title>
+    <link rel="stylesheet" href="/Style/style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Moonlight</a>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </header>
+    <section>
+        <img src="/Images/starOnly .png" id="stars" alt="">
+        <img src="/Images/moon.png" id="moon" alt="">
+        <img src="/Images/back .png" id="back" alt="">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="/Images/frontMounten.png" id="front" 
+        alt=""> 
+        
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallex Scrollling Effecrs</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sunt eius voluptatem asperiores maiores quo voluptate, expedita eligendi illum enim? Cum eveniet voluptatum maxime enim ea eligendi reprehenderit aperiam adipisci! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea laudantium nesciunt aliquam! Molestiae fugiat sunt, corrupti explicabo tempora quibusdam repellat asperiores provident adipisci nobis, odio eligendi maiores quod ducimus voluptas?
+            <br>
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio unde praesentium itaque saepe nemo fugit explicabo, doloremque provident fuga? Itaque voluptatum obcaecati corrupti ad quae animi! Autem nulla asperiores hic sit harum laboriosam sequi voluptate doloremque, velit, natus optio dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quidem illo commodi aspernatur, ratione labore doloribus quisquam ut aut doloremque assumenda facere ipsam sequi odit similique blanditiis alias expedita! Error!
+            <br>
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio unde praesentium itaque saepe nemo fugit explicabo, doloremque provident fuga? Itaque voluptatum obcaecati corrupti ad quae animi! Autem nulla asperiores hic sit harum laboriosam sequi voluptate doloremque, velit, natus optio dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quidem illo commodi aspernatur, ratione labore doloribus quisquam ut aut doloremque assumenda facere ipsam sequi odit similique blanditiis alias expedita! Error!
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio unde praesentium itaque saepe nemo fugit explicabo, doloremque provident fuga? Itaque voluptatum obcaecati corrupti ad quae animi! Autem nulla asperiores hic sit harum laboriosam sequi voluptate doloremque, velit, natus optio dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quidem illo commodi aspernatur, ratione labore doloribus quisquam ut aut doloremque assumenda facere ipsam sequi odit similique blanditiis alias expedita! Error!
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio unde praesentium itaque saepe nemo fugit explicabo, doloremque provident fuga? Itaque voluptatum obcaecati corrupti ad quae animi! Autem nulla asperiores hic sit harum laboriosam sequi voluptate doloremque, velit, natus optio dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quidem illo commodi aspernatur, ratione labore doloribus quisquam ut aut doloremque assumenda facere ipsam sequi odit similique blanditiis alias expedita! Error!
+
+        </p>
+    </div>
+
+    <script>
+        let stars=document.getElementById('stars');
+        let moon=document.getElementById('moon');
+        let back=document.getElementById('back');
+        let text=document.getElementById('text');
+        let btn=document.getElementById('btn');
+        let front=document.getElementById('front');
+        let header=document.querySelector('header');
+        window.addEventListener('scroll',function(){
+            let value= window.scrollY;
+            stars.style.left=value * 0.25 + 'px';
+            moon.style.top=value * .75 + 'px';
+            back.style.top=value * 0.5 + 'px';
+            front.style.top=value * 0 + 'px';
+            text.style.marginRight=value * 4 + 'px';
+            text.style.marginTop=value * 1.3 + 'px';
+            btn.style.marginTop=value * 1.3 + 'px';
+            header.style.top=value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
